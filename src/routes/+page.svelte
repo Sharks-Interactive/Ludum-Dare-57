@@ -15,10 +15,8 @@
 
         window.addEventListener('touchend', reset);
         window.addEventListener('mouseup', reset);
-        window.addEventListener('click', ev => {
-            input.x = (ev.pageX - (window.screenX / 2))^0;
-            input.y = (ev.pageY - (window.screenY / 2))^0;
-        });
+        window.addEventListener('touchstart', ev => takeInput(ev.touches[0]));
+        window.addEventListener('mousedown', takeInput);
 
         window.addEventListener('deviceorientation', handleOrientation);
         function handleOrientation(ev: any) {
@@ -38,6 +36,13 @@
 
     function tick() {
         depth -= 0.75;
+    }
+
+    function takeInput(ev: MouseEvent | Touch) {
+        input = {
+            x: Math.sign(ev.pageX - (document.body.clientWidth / 2)),
+            y: Math.sign(ev.pageY - (document.body.clientHeight / 2))
+        };
     }
 
     function reset() {
@@ -61,7 +66,7 @@
 </div>
 
 <div class="strip">
-    <Submarine></Submarine>
+    <Submarine {input}></Submarine>
 </div>
 
 <style>
