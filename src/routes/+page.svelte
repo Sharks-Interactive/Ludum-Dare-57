@@ -6,10 +6,19 @@
     let depth = 0;
     let event: any;
 
+    let input = { x: 0, y: 0 };
+
     let fish = new Array();
 
     onMount(() => {
         let interval = setInterval(tick, 10);
+
+        window.addEventListener('touchend', reset);
+        window.addEventListener('mouseup', reset);
+        window.addEventListener('click', ev => {
+            input.x = (ev.pageX - (window.screenX / 2))^0;
+            input.y = (ev.pageY - (window.screenY / 2))^0;
+        });
 
         window.addEventListener('deviceorientation', handleOrientation);
         function handleOrientation(ev: any) {
@@ -29,6 +38,10 @@
 
     function tick() {
         depth -= 0.75;
+    }
+
+    function reset() {
+        input = { x: 0, y: 0 };
     }
 </script>
 
