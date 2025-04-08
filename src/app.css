@@ -1,7 +1,10 @@
 html, body {
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     
-    background-color: black;
+    background-color: #14181b;
+    color: white;
+
+    text-align: center;
 
     margin: 0;
     padding: 0;
