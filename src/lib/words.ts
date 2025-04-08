@@ -32,7 +32,10 @@ export let words: word[] = [
             "slashing",
             "evil",
             "vile",
-            "nasty"
+            "nasty",
+            "poison",
+            "poisonous",
+            "horrible"
         ],
     },
     {
@@ -75,7 +78,10 @@ export let words: word[] = [
             "decide",
             "learn",
             "deduce",
-            "find"
+            "find",
+            "obtain",
+            "get",
+            "gain"
         ],
     },
     {
@@ -119,7 +125,8 @@ export let words: word[] = [
             "depressing",
             "dissapoint",
             "distraught",
-            "dejected"
+            "dejected",
+            "disillusioned"
         ],
     },
     {
@@ -146,7 +153,8 @@ export let words: word[] = [
             "ingenious",
             "uncommon",
             "unique",
-            "different"
+            "different",
+            "first"
         ],
     },
     {
@@ -175,7 +183,10 @@ export let words: word[] = [
             "obscure",
             "moot",
             "complex",
-            "farfetched"
+            "farfetched",
+            "lie",
+            "tricky",
+            "sneaky"
         ],
     },
 ];
